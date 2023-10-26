@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+        <title>Page Title</title>
+        </head>
+        <style>
+        * {
+                  margin: 0px;
+                    padding: 0px;
+                }
+
+                #container {
+                    width: 960px;
+                    margin: 50px auto;
+                }
+
+                #nav {
+                    font-weight: 300;
+                    font-size: 15px;
+                }
+
+                #nav ul {
+                    background: #cfcfcf;
+                    height: 40px;
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    gap:10px;
+                    justify-content: space-between;
+                }
+                #nav ul li{
+                    flex-grow: 1;
+                }
+
+                #nav &gt; li &gt; ul {
+                    position: absolute;
+                }
+
+                #nav li a {
+                    background: #cfcfcf;
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #333;
+                    line-height: 40px;
+                    padding: 0px 25px;
+                }
+
+                #nav li a:hover {
+                    text-decoration: none;
+                    background: #915fa6;
+                    color: #FFFFFF;
+                }
+
+                .nav-menu{
+                    position: relative;
+                }
+
+                #nav .nav-menu .sub-menu {
+                    background: #000000;
+                    display: none;
+                    height: auto;
+                    width: 100%;
+                    position: absolute;
+                    top: 40px;
+                }
+                #nav .nav-menu:hover .sub-menu{
+                    display:block;
+                }
+
+                #nav li li{
+                    width: 100%;
+                }
+
+                #nav li ul a {
+                    text-align: left;
+                    display: block;
+                    height: 40px;
+                    padding: 0px 10px 0px 25px;
+                }
+                .submenu-link{
+                    position: relative;
+                }
+                #nav .submenu-link .inner-submenu{
+                    position: absolute;
+                    top: 0;
+                    right: -160px;
+                    width:160px;
+                    display: none;
+                }
+                #nav .submenu-link:hover .inner-submenu{
+                    display: block;
+                }
+        </style>
+        <body>
+        <div id='nav'>
+               <ul>
+                   <li><a href='index.html'>Home</a></li>
+                   <li class='nav-menu'><a href='#'>Menu 1</a>
+                       <ul class='sub-menu'>
+                           <li><a href='#'>Link 1</a></li>
+                           <li><a href='#'>Link 2</a></li>
+                           <li><a href='#'>Link 3</a></li>
+                           <li class='submenu-link'><a href='#'>Submenu</a>
+                               <ul class='inner-submenu'>
+                                   <li><a href='#'>Link1</a></li>
+                                   <li><a href='#'>Link2</a></li>
+                               </ul>
+                           </li>
+                       </ul>
+                   </li>
+                   <li><a href='#'>Link 1</a></li>
+                   <li class='nav-menu'><a href='#'>Menu 2</a>
+                       <ul class='sub-menu'>
+                           <li><a href='#'>Link1</a></li>
+                           <li class='submenu-link'><a href='#'>Submenu1</a>
+                               <ul class='inner-submenu'>
+                                   <li><a href='#'>Link1</a></li>
+                                   <li><a href='#'>Link2</a></li>
+                           </ul>
+                           </li>
+                           <li><a href='#'>Link2</a></li>
+                       </ul>
+                   </li>
+                   <li><a href='#'>Link 2</a></li>
+               </ul>
+           </div>
+
+        </body>
+        </html>
