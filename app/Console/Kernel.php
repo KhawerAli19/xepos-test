@@ -13,11 +13,7 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
-    protected $commands = [
-
-        SendReminderNotifications::class,
-
-    ];
+    protected $commands = [];
 
     /**
      * Define the application's command schedule.
@@ -27,8 +23,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-
-        $schedule->command('jogging:reminder')->everyMinute()->appendOutputTo(storage_path() . '/logs/laravel.log');
     }
 
     /**
